@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Home() {
+  // Demonstrate useState and useEffect
+  // const [img, setImg] = useState("");
+
+  // useEffect(() => {
+  //   fetch("https://picsum.photos/200/300")
+  //     .then((response) => {
+  //       setImg(response.url);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching image: ", error);
+  //     });
+  // }, []);
+
   return (
-    <section className="bg-blue-200 min-h-screen flex px-24 " id="home">
+    <section className="bg-blue-200 min-h-screen flex px-24" id="home">
       <article className="h-screen w-1/2 flex flex-col justify-center items-center align-middle">
         <div className="flex flex-col gap-2">
           <h1 className="text-5xl font-bold">Welcome to To-Do List</h1>
@@ -12,7 +25,7 @@ function Home() {
         </div>
         <div className="text-xl flex justify-center gap-5 w-1/2 mt-5">
           <button
-            className="rounded-full bg-blue-700 text-white py-2 px-5"
+            className="button"
             onClick={() => {
               window.location.href = "#lists";
             }}
@@ -20,7 +33,7 @@ function Home() {
             View
           </button>
           <button
-            className="rounded-full bg-blue-700 text-white py-2 px-5"
+            className="button"
             onClick={() => {
               window.location.href = "#create";
             }}
@@ -30,6 +43,7 @@ function Home() {
         </div>
       </article>
       <article className="w-1/2 h-[75vh] p-0">
+        {/* <img src={img} alt="Hero Image" /> */}
         <img src="/hero.png" alt="Hero Image" />
       </article>
     </section>

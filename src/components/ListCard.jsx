@@ -5,9 +5,13 @@ function ListCard({ list }) {
 
   const handleDeleteItem = (index) => {
     const newItems = [..._list.items];
-    newItems.splice(index, 1);
+    newItems.splice(index, 1); // delete the element at index
     setList({ ..._list, items: newItems });
   };
+
+  if (_list.items.length === 0) {
+    return;
+  }
 
   return (
     <article className="rounded-lg bg-yellow-200 p-10 border-2 border-black min-w-[250px] h-fit">
